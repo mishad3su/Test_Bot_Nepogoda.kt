@@ -44,12 +44,12 @@ data class Wind(val speed: Double)
 
 val client = OkHttpClient()
 val json = Json { ignoreUnknownKeys = true }
-val openWeatherApiKey = "ce19e1d1db5948e4b723a5016232b6a0"
+val openWeatherApiKey = *api_key*
 
 @OptIn(DelicateCoroutinesApi::class)
 fun main() {
     val bot = bot {
-        token = "7429355221:AAH6HOkBWSDy3v25E4xtM1I9BIWeT9fCqvU"
+        token = *bot_token*
         dispatch {
             command("help") {
                 val result = bot.sendMessage(
